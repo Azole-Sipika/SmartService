@@ -1,0 +1,9 @@
+r
+r
+
+r@SmartService.API_HostAddress = http://localhost:5255
+
+GET {{SmartService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

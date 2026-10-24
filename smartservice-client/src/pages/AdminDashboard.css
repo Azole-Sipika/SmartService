@@ -1,0 +1,195 @@
+
+/*
+  SmartService Admin Dashboard
+
+  Shared layout, sidebar, typography, tables,
+  cards and theme colours come from ManagerDashboard.css.
+*/
+
+.admin-dashboard .admin-quick-actions {
+  margin-bottom: 28px;
+}
+
+.admin-dashboard .admin-section-heading {
+  margin-bottom: 18px;
+}
+
+.admin-dashboard .admin-section-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.admin-dashboard .admin-section-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.admin-dashboard .admin-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-dashboard .admin-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 175px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  color: var(--text);
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(7, 25, 54, 0.05);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-dashboard .admin-action-card:hover {
+  transform: translateY(-3px);
+  border-color: #079392;
+  box-shadow: 0 12px 28px rgba(7, 25, 54, 0.1);
+}
+
+.admin-dashboard .admin-action-card:focus-visible,
+.admin-dashboard .admin-view-all:focus-visible,
+.admin-dashboard .admin-retry-button:focus-visible {
+  outline: 3px solid #079392;
+  outline-offset: 3px;
+}
+
+.admin-dashboard .admin-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(7, 147, 146, 0.12);
+  color: #079392;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.admin-dashboard .admin-action-card strong {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.admin-dashboard .admin-action-card > span:last-child {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-dashboard .admin-staff-section {
+  margin-top: 8px;
+}
+
+.admin-dashboard .admin-view-all {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #079392;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-dashboard .admin-view-all:hover {
+  background: #067b7a;
+}
+
+.admin-dashboard .admin-retry-button {
+  margin-left: 14px;
+  padding: 7px 12px;
+  border: 1px solid currentColor;
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.admin-dashboard .admin-table-message {
+  padding: 35px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.admin-dashboard .admin-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.admin-dashboard .admin-status-active {
+  background: #e6f8ec;
+  color: #13833d;
+}
+
+.admin-dashboard .admin-status-inactive {
+  background: #ffe8e8;
+  color: #b42318;
+}
+
+[data-theme='dark'] .admin-dashboard .admin-action-icon {
+  background: rgba(45, 212, 191, 0.14);
+  color: #2dd4bf;
+}
+
+[data-theme='dark'] .admin-dashboard .admin-status-active {
+  background: #153d2d;
+  color: #86efac;
+}
+
+[data-theme='dark'] .admin-dashboard .admin-status-inactive {
+  background: #4b2020;
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .admin-dashboard .admin-action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-dashboard .admin-action-card {
+    min-height: 150px;
+  }
+
+  .admin-dashboard .manager-card-header {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard .admin-action-card {
+    padding: 20px;
+  }
+
+  .admin-dashboard .admin-view-all {
+    width: 100%;
+  }
+}
+
+.admin-dashboard .manager-nav-item {
+  display: block;
+  text-decoration: none;
+}

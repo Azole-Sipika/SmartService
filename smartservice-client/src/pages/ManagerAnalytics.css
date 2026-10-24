@@ -1,0 +1,364 @@
+
+/* =========================================
+   MANAGER ANALYTICS DASHBOARD
+   ========================================= */
+
+.manager-analytics .analytics-header {
+  align-items: flex-end;
+}
+
+.manager-analytics .analytics-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.manager-analytics .analytics-header-actions label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manager-analytics .analytics-header-actions select {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.manager-analytics .analytics-refresh {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 9px;
+  background: #079392;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.manager-analytics .analytics-refresh:hover:not(:disabled) {
+  background: #067b7a;
+}
+
+.manager-analytics .analytics-refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.manager-analytics .analytics-period-note {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* SUMMARY CARDS */
+
+.manager-analytics .analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.manager-analytics .analytics-stat-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 8px 25px rgba(7, 25, 54, 0.05);
+}
+
+.manager-analytics .analytics-stat-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.manager-analytics .analytics-stat-card strong {
+  display: block;
+  margin: 12px 0 8px;
+  color: var(--text);
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 800;
+}
+
+.manager-analytics .analytics-stat-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* CHART PANELS */
+
+.manager-analytics .analytics-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.manager-analytics .analytics-panel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--card-border);
+  border-radius: 17px;
+  background: var(--card);
+  box-shadow: 0 8px 25px rgba(7, 25, 54, 0.05);
+}
+
+.manager-analytics .analytics-panel-heading {
+  margin-bottom: 25px;
+}
+
+.manager-analytics .analytics-panel-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.manager-analytics .analytics-panel-heading p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* MONTHLY BAR CHART */
+
+.manager-analytics .analytics-month-chart {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 12px;
+  min-height: 240px;
+}
+
+.manager-analytics .analytics-month {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.manager-analytics .analytics-month-value {
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.manager-analytics .analytics-month-track {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 45px;
+  min-height: 175px;
+  border-radius: 8px 8px 0 0;
+  background: rgba(7, 147, 146, 0.08);
+  overflow: hidden;
+}
+
+.manager-analytics .analytics-month-bar {
+  width: 100%;
+  min-height: 0;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(
+    180deg,
+    #00dca8 0%,
+    #079392 100%
+  );
+  transition: height 0.3s ease;
+}
+
+.manager-analytics .analytics-month-label {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* STATUS AND PRIORITY PROGRESS BARS */
+
+.manager-analytics .analytics-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.manager-analytics .analytics-progress-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.manager-analytics .analytics-progress-label span {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manager-analytics .analytics-progress-label strong {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.manager-analytics .analytics-progress-track {
+  width: 100%;
+  height: 11px;
+  border-radius: 20px;
+  background: var(--table-border);
+  overflow: hidden;
+}
+
+.manager-analytics .analytics-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+/* REQUEST OVERVIEW */
+
+.manager-analytics .analytics-overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.manager-analytics .analytics-overview-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--table-border);
+}
+
+.manager-analytics .analytics-overview-list > div:last-child {
+  border-bottom: 0;
+}
+
+.manager-analytics .analytics-overview-list span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.manager-analytics .analytics-overview-list strong {
+  color: var(--text);
+  font-size: 18px;
+}
+
+/* EMPLOYEE WORKLOAD */
+
+.manager-analytics .analytics-workload {
+  padding: 0;
+  overflow: hidden;
+}
+
+.manager-analytics .analytics-workload
+.analytics-panel-heading {
+  padding: 24px 24px 0;
+  margin-bottom: 18px;
+}
+
+.manager-analytics .analytics-employee-status {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.manager-analytics .analytics-employee-status.is-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.manager-analytics .analytics-employee-status.is-inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* DARK MODE */
+
+[data-theme='dark']
+.manager-analytics .analytics-employee-status.is-active {
+  background: #123d31;
+  color: #86efac;
+}
+
+[data-theme='dark']
+.manager-analytics .analytics-employee-status.is-inactive {
+  background: #451a1a;
+  color: #fca5a5;
+}
+
+[data-theme='dark']
+.manager-analytics .analytics-month-track {
+  background: #1b3042;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+  .manager-analytics .analytics-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .manager-analytics .analytics-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .manager-analytics .analytics-header {
+    align-items: flex-start;
+  }
+
+  .manager-analytics .analytics-header-actions {
+    width: 100%;
+  }
+
+  .manager-analytics .analytics-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .manager-analytics .analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .manager-analytics .analytics-panel {
+    padding: 18px;
+  }
+
+  .manager-analytics .analytics-workload {
+    padding: 0;
+  }
+
+  .manager-analytics .analytics-month-chart {
+    gap: 6px;
+  }
+
+  .manager-analytics .analytics-month-label {
+    font-size: 10px;
+  }
+}

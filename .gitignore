@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# .NET
+bin/
+obj/
+.vs/
+TestResults/
+
+# Local configuration
+appsettings.Development.json
+**/appsettings.Development.json
+appsettings.Local.json
+**/appsettings.Local.json
+*.user
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+# Private user-uploaded files
+**/PrivateUploads/
+**/PrivateUploads/**
+
+# Local secrets and configuration
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/secrets.json
+.env
+.env.*
+!.env.example
+**/appsettings.json

@@ -1,0 +1,469 @@
+
+/* SmartService Customer / Manager profile */
+
+.account-portal-layout {
+  --profile-bg: #f6f8fb;
+  --profile-card: #fff;
+  --profile-border: #e5eaf1;
+  --profile-text: #071936;
+  --profile-muted: #64748b;
+
+  display: flex;
+  min-height: 100vh;
+  background: var(--profile-bg);
+  color: var(--profile-text);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.account-portal-layout * {
+  box-sizing: border-box;
+}
+
+/* SIDEBAR */
+
+.account-portal-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 250px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  background: linear-gradient(
+    180deg,
+    #00ef37 0%,
+    #079392 52%,
+    #071936 100%
+  );
+  color: #fff;
+}
+
+.account-portal-layout.customer-portal .account-portal-sidebar {
+  background: linear-gradient(
+    165deg,
+    #00ef37 0%,
+    #079392 48%,
+    #087f86 100%
+  );
+}
+
+.account-portal-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.account-portal-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #071936;
+  color: #00ef37;
+  font-size: 25px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.account-portal-brand h2 {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.account-portal-brand span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.account-portal-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-portal-nav-item {
+  width: 100%;
+  padding: 13px 15px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.account-portal-nav-item:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.account-portal-nav-item.active {
+  background: rgba(7, 25, 54, 0.82);
+}
+
+.account-portal-sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.account-portal-sidebar-bottom .theme-toggle {
+  width: 100%;
+}
+
+.account-portal-logout {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(7, 25, 54, 0.45);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-portal-logout:hover {
+  background: #071936;
+}
+
+/* MAIN CONTENT */
+
+.account-portal-layout .account-profile-page {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 250px;
+  padding: 34px 40px 55px;
+  background: var(--profile-bg);
+  color: var(--profile-text);
+}
+
+.account-portal-layout .account-profile-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.account-portal-layout .account-profile-back {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #079392;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-portal-layout .account-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+}
+
+.account-portal-layout .account-profile-eyebrow {
+  margin: 0 0 5px;
+  color: #079392;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.account-portal-layout .account-profile-header h1 {
+  margin: 0;
+  color: var(--profile-text);
+  font-size: 31px;
+}
+
+.account-portal-layout
+.account-profile-header p:not(.account-profile-eyebrow) {
+  margin: 7px 0 0;
+  color: var(--profile-muted);
+}
+
+.account-portal-layout .account-profile-status {
+  display: inline-flex;
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #e6f8ec;
+  color: #13833d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* PROFILE CARDS */
+
+.account-portal-layout .account-profile-card {
+  width: 100%;
+  padding: 26px 28px;
+  border: 1px solid var(--profile-border);
+  border-radius: 17px;
+  background: var(--profile-card);
+  color: var(--profile-text);
+  box-shadow: 0 8px 25px rgba(7, 25, 54, 0.05);
+}
+
+.account-portal-layout .account-profile-card h2 {
+  margin: 0 0 8px;
+  color: var(--profile-text);
+  font-size: 20px;
+}
+
+.account-portal-layout .account-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.account-portal-layout .account-profile-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ef37, #079392);
+  color: #071936;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.account-portal-layout .account-profile-identity p,
+.account-portal-layout .account-profile-identity span,
+.account-portal-layout .account-profile-description {
+  color: var(--profile-muted);
+}
+
+.account-portal-layout .account-profile-description {
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+/* FORMS */
+
+.account-portal-layout .account-profile-grid,
+.account-portal-layout .account-profile-password-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.account-portal-layout .account-profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.account-portal-layout .account-profile-field label {
+  color: var(--profile-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.account-portal-layout .account-profile-field input {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--profile-border);
+  border-radius: 9px;
+  background: var(--profile-card);
+  color: var(--profile-text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.account-portal-layout .account-profile-field input:focus {
+  outline: none;
+  border-color: #079392;
+  box-shadow: 0 0 0 3px rgba(7, 147, 146, 0.13);
+}
+
+.account-portal-layout .account-profile-field input[readonly] {
+  background: var(--profile-bg);
+  color: var(--profile-muted);
+}
+
+.account-portal-layout .account-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.account-portal-layout .account-profile-actions button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #2f68ed;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-portal-layout
+.account-profile-actions button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.account-portal-layout .account-profile-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* FEEDBACK MESSAGES */
+
+.account-portal-layout .account-profile-success,
+.account-portal-layout .account-profile-error {
+  margin: 12px 0 20px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.account-portal-layout .account-profile-success {
+  background: #eafaf0;
+  color: #13833d;
+  border: 1px solid #9fddb4;
+}
+
+.account-portal-layout .account-profile-error {
+  background: #fff0f0;
+  color: #b42318;
+  border: 1px solid #efb4b4;
+}
+
+/* DARK MODE */
+
+[data-theme='dark'] .account-portal-layout,
+.account-portal-layout[data-theme='dark'] {
+  --profile-bg: #07111f;
+  --profile-card: #101d2f;
+  --profile-border: #22334a;
+  --profile-text: #e5edf7;
+  --profile-muted: #9fb0c5;
+}
+
+[data-theme='dark'] .account-portal-sidebar {
+  background: linear-gradient(
+    165deg,
+    #079392 0%,
+    #075e67 45%,
+    #071936 100%
+  ) !important;
+}
+
+[data-theme='dark'] .account-portal-nav-item.active {
+  background: white;
+  color: #071936;
+}
+
+[data-theme='dark']
+.account-portal-layout .account-profile-eyebrow {
+  color: #25d9c8;
+}
+
+[data-theme='dark']
+.account-portal-layout .account-profile-field input[readonly] {
+  background: #0c1727;
+}
+
+[data-theme='dark']
+.account-portal-layout .account-profile-status {
+  background: #123c31;
+  color: #8df0b3;
+}
+
+/* LOADING STATE - SAME PORTAL BACKGROUND */
+
+.account-portal-layout .account-profile-page {
+  background: var(--profile-bg);
+}
+
+.account-profile-wait {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.account-profile-spinner {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgba(7, 147, 146, 0.2);
+  border-top-color: #079392;
+  border-radius: 50%;
+  animation: account-profile-spin 0.8s linear infinite;
+}
+
+@keyframes account-profile-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+  .account-portal-layout {
+    display: block;
+  }
+
+  .account-portal-sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .account-portal-brand {
+    margin-bottom: 20px;
+  }
+
+  .account-portal-layout .account-profile-page {
+    margin-left: 0;
+    padding: 25px 18px;
+  }
+
+  .account-portal-layout .account-profile-grid,
+  .account-portal-layout .account-profile-password-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .account-portal-layout .account-profile-card {
+    padding: 20px;
+  }
+
+  .account-portal-layout .account-profile-header h1 {
+    font-size: 27px;
+  }
+}
+
+.account-portal-nav a.account-portal-nav-item {
+  display: block;
+  text-decoration: none;
+}
+
+.account-portal-nav a.account-portal-nav-item:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
